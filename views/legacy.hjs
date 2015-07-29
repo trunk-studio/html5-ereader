@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<link href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet"/>
+<link href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="stylesheets/legacy.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <h1>{{ title }}</h1>
+  </div>
+</header>
+
+<div id="viewer">
+    <div id="viewer-content" class="single-page">
+      {{#pages}}
+      <div class="image-rendering image-content" id="p{{index}}" data-url="{{url}}"></div>
+      {{/pages}}
+    </div>
+
+    <a href="#" class="page-switcher page-switcher-prev" data-transition="slide"
+       data-direction="reverse" data-target="0" data-offset="-1" data-maximum="39">
+        <i class="fa fa-chevron-left"></i>
+    </a>
+
+    <a href="#" class="page-switcher page-switcher-next" data-transition="slide" data-target="1" data-offset="1" data-maximum="39">
+        <i class="fa fa-chevron-right"></i>
+    </a>
+
+    <input name="current" value="0" type="hidden"/>
+    <input name="maximum" value="39" type="hidden"/>
+</div>
+
+<footer>
+  <div class="progressbar">
+      <div style="display: inline-block; width: 100%;">
+        <div class="page-num-display">
+            <span id="textCurrentPageNum">1</span> / <span id="textTotalPageNum">40</span>
+        </div>
+
+        <div id="slider" data-min="0" data-max="39"></div>
+      </div>
+  </div>
+</footer>
+
+<script type="application/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="application/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script type="application/javascript" src="//timmywil.github.io/jquery.panzoom/dist/jquery.panzoom.js"></script>
+<script type="application/javascript" src="//cdn.rawgit.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
+<script type="application/javascript" src="//labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
+<script type="application/javascript" src="javascripts/legacy.js"></script>
+</body>
+</html>
