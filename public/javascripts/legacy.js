@@ -126,7 +126,7 @@ $(function () {
     };
 
    $('.image-content').click(function() {
-     $('header, footer').toggle();
+     $('header, footer, .page-switcher').toggle();
    });
 
     $('.image-content').dblclick(function() {
@@ -191,14 +191,12 @@ $(function () {
         if(e.keyCode == 37) { // left
             var current = parseInt($('input[name=current]').val());
             current += -1;
-
-            $('#slider').slider('value', current + 1);
+            $('#slider').slider('value', current);
         }
         else if(e.keyCode == 39) { // right
             var current = parseInt($('input[name=current]').val());
             current += 1;
-
-            $('#slider').slider('value', current + 1);
+            $('#slider').slider('value', current);
         }
         else if (e.keyCode == 27) { // esc
             $('#panzoom-parent').remove();

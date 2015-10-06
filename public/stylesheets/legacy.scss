@@ -147,17 +147,17 @@ footer {
 }
 
 #viewer-content {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .image-rendering {
     /*image-rendering: optimizeQuality; -ms-interpolation-mode:bicubic;*/
     /*image-rendering: -webkit-pixelated;*/
-    image-rendering: pixelated;
-    image-rendering: optimize-contrast;
+    /*image-rendering: pixelated;
+    image-rendering: optimize-contrast;*/
     /*image-resolution: 300dpi;*/
-    image-resolution: 72dpi;
+    image-resolution: 300dpi;
     /*image-rendering:-moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering:-webkit-optimize-contrast; -ms-interpolation-mode:nearest-neighbor;*/
 }
 
@@ -169,6 +169,13 @@ footer {
     background-position: center;
     top: 0;
     bottom: 0;
+
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+
+    transform: translate(0, 0);
 }
 
 .single-page .image-content {
